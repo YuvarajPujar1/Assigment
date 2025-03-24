@@ -1,6 +1,5 @@
 n = int(input("Enter the number of integers: "))
 
-# Initialize sum variable
 total = 0
 
 # Loop to get n numbers and add them

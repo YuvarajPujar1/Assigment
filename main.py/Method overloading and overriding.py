@@ -1,26 +1,32 @@
-# Method Overloading (Using Default Arguments)
-class MathOperations:
+# Overloading 
+class Calculator:
+    # Method with default arguments to simulate overloading
     def add(self, a, b=0, c=0):
-        return a + b + c  # Handles 1, 2, or 3 parameters
+        return a + b + c
 
-# Method Overriding (Using Inheritance)
-class Parent:
-    def show(self):
-        print("This is the Parent class method.")
+# Creating object of Calculator class
+calc = Calculator()
 
-class Child(Parent):
-    def show(self):  # Overriding Parent's method
-        print("This is the Child class method.")
+# Calling method with different number of arguments
+print(calc.add(5))         
+print(calc.add(5, 10))    
+print(calc.add(5, 10, 15)) 
 
-# Testing Method Overloading
-math_obj = MathOperations()
-print("Sum with 1 argument:", math_obj.add(5))
-print("Sum with 2 arguments:", math_obj.add(5, 10))
-print("Sum with 3 arguments:", math_obj.add(5, 10, 15))
 
-# Testing Method Overriding
-obj1 = Parent()
-obj2 = Child()
+#OverRidding 
+class Animal:
+    def make_sound(self):
+        print("Animal makes a sound")
 
-obj1.show()  # Calls Parent's method
-obj2.show()  # Calls Child's overridden method
+# Child class (Overriding the make_sound method)
+class Dog(Animal):
+    def make_sound(self):
+        print("Dog barks")
+
+# Creating objects
+animal = Animal()
+dog = Dog()
+
+# Calling the method
+animal.make_sound()  # Calls parent class method → Output: Animal makes a sound
+dog.make_sound()     # Calls child class method → Output: Dog barks
