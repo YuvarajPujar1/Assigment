@@ -1,0 +1,3 @@
+numberslist = [5, 10, 15, 20] 
+total = sum(numberslist)
+print("The sum of the number list is:", total)

@@ -1,0 +1,11 @@
+employee = {}
+
+n = int(input("How many Employees? "))
+
+for i in range(n):
+    name = input(f"Enter name of Employee {i+1}: ")
+    age = int(input("Enter age: "))
+    employee[name] = age  
+
+
+print("All Employees:", employee)
